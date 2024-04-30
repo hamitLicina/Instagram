@@ -1,6 +1,8 @@
-import { useState } from 'react'
-import './App.css'
 
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage/HomePage'
+import AuthPage from './pages/AuthPage/AuthPage'
 
 
 function App() {
@@ -9,9 +11,10 @@ function App() {
   
   return (
     <>
-      <div>
-
-      </div>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/auth' element={<AuthPage />} />
+      </Routes>
     </>
   )
 }
