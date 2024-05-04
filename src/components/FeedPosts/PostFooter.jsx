@@ -4,7 +4,7 @@ import { UnlikeLogo, NotificationsLogo, CommentLogo } from './../../assets/const
 
 
 
-const PostFooter = ({username}) => {
+const PostFooter = ({ username, isProfilePage }) => {
 
     const [liked, setLiked] = useState(false)
     const [likes, setLikes] = useState(1903)
@@ -20,7 +20,7 @@ const PostFooter = ({username}) => {
     }
 
     return (
-        <Box my={10}>
+        <Box my={10} marginTop={"auto"} >
             <Flex alignItems={"center"} gap={4} w={"full"} pt={1} mb={2} mt={5} >
                 <Box onClick={handleLike} cursor={"pointer"} fontSize={18} >
                     {!liked ? (<NotificationsLogo />) : (<UnlikeLogo />)}
@@ -32,12 +32,18 @@ const PostFooter = ({username}) => {
             <Text fontWeight={600} fontSize={"sm"} >
                 {likes} likes
             </Text>
-            <Text fontSize={"sm"} fontWeight={700}>
-                {username} {" "}
-                <Text as="span" fontWeight={400}>
-                    What a nice smile, feeling good
-                </Text>
-            </Text>
+            {
+                !isProfilePage && (
+                    <>
+                        <Text fontSize={"sm"} fontWeight={700}>
+                            {username} {" "}
+                            <Text as="span" fontWeight={400}>
+                                What a nice smile, feeling good
+                            </Text>
+                        </Text>
+                    </>
+                )
+            }
             <Text fontSize={"small"} color={"gray"}>
                 View all 2.222 comments
             </Text>

@@ -1,8 +1,9 @@
-import { Avatar, Box, Divider, Flex, GridItem, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text, VStack, useDisclosure } from "@chakra-ui/react"
+import { Avatar, Box, Divider, Flex, GridItem, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, VStack, useDisclosure } from "@chakra-ui/react"
 import { AiFillHeart } from "react-icons/ai"
 import { FaComment } from "react-icons/fa"
 import { MdDelete } from "react-icons/md"
 import Comment from "../Comment/Comment"
+import PostFooter from "../FeedPosts/PostFooter"
 
 
 
@@ -62,6 +63,8 @@ const ProfilePost = ({ img }) => {
 
                                     <Comment createdAt="3 Day Ago" username="kerimlicina" profilePic="/public/img2.png" text={"Good Clone"} />
                                 </VStack>
+                                <Divider my={4} bg={"gray.800"} />
+                                <PostFooter isProfilePage={true} />
                             </Flex>
                         </Flex>
                     </ModalBody>
