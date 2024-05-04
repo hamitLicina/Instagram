@@ -59,9 +59,9 @@ const ProfilePost = ({ img }) => {
                                 <VStack w="full" alignItems={"start"} maxH={"350px"} overflowY={"auto"} >
                                     <Comment createdAt="1 Day Ago" username="hamitlicina" profilePic="/profile.jpeg" text={"Dummy images from unsplash"} />
 
-                                    <Comment createdAt="12 Hours Ago" username="serralicina" profilePic="/public/img1.png" text={"Nice pic"} />
+                                    <Comment createdAt="12 Hours Ago" username="serralicina" profilePic="/img1.png" text={"Nice pic"} />
 
-                                    <Comment createdAt="3 Day Ago" username="kerimlicina" profilePic="/public/img2.png" text={"Good Clone"} />
+                                    <Comment createdAt="3 Day Ago" username="kerimlicina" profilePic="/img2.png" text={"Good Clone"} />
                                 </VStack>
                                 <Divider my={4} bg={"gray.800"} />
                                 <PostFooter isProfilePage={true} />
