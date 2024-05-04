@@ -5,6 +5,8 @@ import useShowToast from "../../hooks/useShowToast";
 import useAuthStore from "../../store/authStore";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 
+
+
 const GoogleAuth = ({ prefix }) => {
 	const [signInWithGoogle, , , error] = useSignInWithGoogle(auth);
 	const showToast = useShowToast();
