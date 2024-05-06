@@ -8,7 +8,7 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 
 
 const GoogleAuth = ({ prefix }) => {
-	const [signInWithGoogle, , , error] = useSignInWithGoogle(auth);
+	const [signInWithGoogle, error] = useSignInWithGoogle(auth);
 	const showToast = useShowToast();
 	const loginUser = useAuthStore((state) => state.login);
 
