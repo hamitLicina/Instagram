@@ -4,6 +4,8 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyAc74oahu0aDlufohyHvEJ7TrrE3go2Xac",
   authDomain: "instagram-hamitlicina.firebaseapp.com",
