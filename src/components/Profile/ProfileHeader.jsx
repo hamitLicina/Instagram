@@ -12,8 +12,8 @@ const ProfileHeader = () => {
     const authUser = useAuthStore((state) => state.user)
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { isFollowing, isUpdating, handleFollowUser } = useFollowUser(userProfile?.uid);
-    const visitingOwnProfileAndAuth = authUser && authUser.username === userProfile.username;
-    const visitingAnotherProfileAndAuth = authUser && authUser.username !== userProfile.username;
+    const visitingOwnProfileAndAuth = authUser && authUser.username === userProfile?.username;
+    const visitingAnotherProfileAndAuth = authUser && authUser.username !== userProfile?.username;
 
 
     return (
@@ -42,7 +42,7 @@ const ProfileHeader = () => {
                         <Text as="span" fontWeight={"bold"} mr={1} >{userProfile.posts.length}</Text>Posts
                     </Text>
                     <Text fontSize={{ base: "xs", md: "sm" }} >
-                        <Text as="span" fontWeight={"bold"} mr={1} >{userProfile.followers.length}</Text> Following
+                        <Text as="span" fontWeight={"bold"} mr={1} >{userProfile.followers.length}</Text> Followers
                     </Text>
                     <Text fontSize={{ base: "xs", md: "sm" }} >
                         <Text as="span" fontWeight={"bold"} mr={1} >{userProfile.following.length}</Text> Following
