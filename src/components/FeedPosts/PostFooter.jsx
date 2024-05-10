@@ -57,7 +57,7 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
                             </Text>
                         )}
                         {/*Comments modal Only in the HomePage */}
-                        {isOpen ? <CommentsModal isOpen={isOpen} onClose={onClose} post={post} /> : null }
+                        {isOpen ? <CommentsModal isOpen={isOpen} onClose={onClose} post={post} /> : null}
                     </>
                 )
             }

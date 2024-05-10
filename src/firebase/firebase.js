@@ -7,13 +7,13 @@ import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAc74oahu0aDlufohyHvEJ7TrrE3go2Xac",
-  authDomain: "instagram-hamitlicina.firebaseapp.com",
-  projectId: "instagram-hamitlicina",
-  storageBucket: "instagram-hamitlicina.appspot.com",
-  messagingSenderId: "694282974294",
-  appId: "1:694282974294:web:d879aac71a35c790aab7f7",
-  measurementId: "G-S4K5J418V6",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
