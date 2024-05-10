@@ -1,21 +1,22 @@
-import { Box, Button, Flex, Input, InputGroup, InputRightElement, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Input, InputGroup, InputRightElement, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useRef, useState } from 'react'
 import { UnlikeLogo, NotificationsLogo, CommentLogo } from './../../assets/constants';
 import usePostComment from '../../hooks/usePostComment';
 import useAuthStore from '../../store/authStore';
 import useLikePost from '../../hooks/useLikePost';
 import { timeAgo } from '../../utils/timeAgo';
+import CommentsModal from '../Modals/CommentsModal';
 
 
 
 const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
-
 
     const { isCommenting, handlePostComment } = usePostComment()
     const [comment, setComment] = useState("")
     const authUser = useAuthStore(state => state.user)
     const commentRef = useRef(null)
     const { handleLikePost, isLiked, likes } = useLikePost(post)
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     const handleSubmitComment = async () => {
         await handlePostComment(post.id, comment)
@@ -49,14 +50,17 @@ const PostFooter = ({ post, isProfilePage, creatorProfile }) => {
                                 {post.caption}
                             </Text>
                         </Text>
+
+                        {post.comments.length > 0 && (
+                            <Text fontSize={"small"} color={"gray"} cursor={"pointer"} onClick={onOpen} >
+                                View all {post.comments.length} comments
+                            </Text>
+                        )}
+                        {/*Comments modal Only in the HomePage */}
+                        {isOpen ? <CommentsModal isOpen={isOpen} onClose={onClose} post={post} /> : null }
                     </>
                 )
             }
-            {post.comments.length > 0 && (
-                <Text fontSize={"small"} color={"gray"} cursor={"pointer"} >
-                    View all {post.comments.length} comments
-                </Text>
-            )}
             {authUser && (
                 <Flex alignItems={"center"} gap={2} justifyContent={"space-between"} w={"full"} >
                     <InputGroup>
