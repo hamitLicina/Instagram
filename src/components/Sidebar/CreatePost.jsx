@@ -125,7 +125,8 @@ function useCreatePost() {
 }
 
 
-
+{/*
+    
 // 1- COPY AND PASTE AS THE STARTER CODE FOR THE CREATE POST COMPONENT
 // import { Box, Flex, Tooltip } from "@chakra-ui/react";
 // import { CreatePostLogo } from "../../assets/constants";
@@ -159,6 +160,7 @@ function useCreatePost() {
 // };
 
 // export default CreatePost;
+*/}
 
 // 2-COPY AND PASTE FOR THE MODAL
 {

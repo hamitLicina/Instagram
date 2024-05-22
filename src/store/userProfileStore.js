@@ -5,7 +5,7 @@ import { create } from "zustand";
 const useUserProfileStore = create((set) => ({
   userProfile: null,
   setUserProfile: (userProfile) => set({ userProfile }),
-  // this is used to update the number of posts in the profile page
+  // This is used to update the number of posts in the profile page
   addPost: (post) =>
     set((state) => ({
       userProfile: {
@@ -20,6 +20,12 @@ const useUserProfileStore = create((set) => ({
         posts: state.userProfile.posts.filter((id) => id !== postId),
       },
     })),
+}));
+
+export default useUserProfileStore;
+{
+  /* 
+
   //   // This is used to update the number of posts in the profile page
   //   addPost: (post) =>
   //     set((state) => ({
@@ -35,6 +41,5 @@ const useUserProfileStore = create((set) => ({
   //         posts: state.userProfile.posts.filter((id) => id !== postId),
   //       },
   //     })),
-}));
-
-export default useUserProfileStore;
+*/
+}

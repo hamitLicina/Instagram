@@ -9,46 +9,51 @@ import SidebarItems from "./SidebarItems"
 
 const Sidebar = () => {
 
-  // The commented and abbreviated code block below is the static user interface. It has been deprecated as a dynamic version was later created with Firebase
-  // const sidebarItems = [
-  //   {
-  //     icon: <AiFillHome size={25} />,
-  //     text: "Home",
-  //     link: "/",
-  //   },
-  //   {
-  //     icon: <SearchLogo />,
-  //     text: "Search",
-  //   },
-  //   {
-  //     icon: <NotificationsLogo />,
-  //     text: "Notifications",
-  //   },
-  //   {
-  //     icon: <CreatePostLogo />,
-  //     text: "Create",
-  //   },
-  //   {
-  //     icon: <Avatar size={"sm"} name="Hamit Licina" src="/profile.jpeg" />,
-  //     text: "Profile",
-  //     link: "/hamitlicina",
-  //   },
-
-  // ]
-  // Avatar => "@chakra-ui/react" , CreatePostLogo, NotificationsLogo, SearchLogo => "../../assets/constants" , import { AiFillHome } from "react-icons/ai"
-
-  // // Also This is a part of static code 
-  //         {sidebarItems.map((item, index) => (
-  //           <Tooltip key={index} hasArrow label={item.text} placement="right" ml={1} openDelay={500} display={{ base: "block", md: "none" }} >
-  //             <Link display={"flex"} to={item.link || null} as={RouterLink} alignItems={"center"} gap={4} _hover={{ bg: "whiteAlpha.400" }} borderRadius={6} p={2} w={{ base: 10, md: "full" }} justifyContent={{ base: "center", md: "flex-start" }} >
-  //               {item.icon}
-  //               <Box display={{ base: "none", md: "block" }} >
-  //                 {item.text}
-  //               </Box>
-  //             </Link>
-  //           </Tooltip>
-  //         ))}
-  //       </Flex>
+  {
+    /*
+    
+    // The commented and abbreviated code block below is the static user interface. It has been deprecated as a dynamic version was later created with Firebase
+    // const sidebarItems = [
+    //   {
+    //     icon: <AiFillHome size={25} />,
+    //     text: "Home",
+    //     link: "/",
+    //   },
+    //   {
+    //     icon: <SearchLogo />,
+    //     text: "Search",
+    //   },
+    //   {
+    //     icon: <NotificationsLogo />,
+    //     text: "Notifications",
+    //   },
+    //   {
+    //     icon: <CreatePostLogo />,
+    //     text: "Create",
+    //   },
+    //   {
+    //     icon: <Avatar size={"sm"} name="Hamit Licina" src="/profile.jpeg" />,
+    //     text: "Profile",
+    //     link: "/hamitlicina",
+    //   },
+  
+    // ]
+    // Avatar => "@chakra-ui/react" , CreatePostLogo, NotificationsLogo, SearchLogo => "../../assets/constants" , import { AiFillHome } from "react-icons/ai"
+  
+    // // Also This is a part of static code 
+    //         {sidebarItems.map((item, index) => (
+    //           <Tooltip key={index} hasArrow label={item.text} placement="right" ml={1} openDelay={500} display={{ base: "block", md: "none" }} >
+    //             <Link display={"flex"} to={item.link || null} as={RouterLink} alignItems={"center"} gap={4} _hover={{ bg: "whiteAlpha.400" }} borderRadius={6} p={2} w={{ base: 10, md: "full" }} justifyContent={{ base: "center", md: "flex-start" }} >
+    //               {item.icon}
+    //               <Box display={{ base: "none", md: "block" }} >
+    //                 {item.text}
+    //               </Box>
+    //             </Link>
+    //           </Tooltip>
+    //         ))}
+    //       </Flex>
+  */
+  }
 
   const { handleLogout, isLoggingOut } = useLogout()
   return (

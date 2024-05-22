@@ -106,7 +106,7 @@ const ProfilePost = ({ post }) => {
                                     {post?.caption && <Caption post={post} />}
                                     {/* COMMENTS */}
                                     {post?.comments.map((comment) => (
-                                        <Comment key={comment?.id} comment={comment} />
+                                        <Comment key={comment.id} comment={comment} />
                                     ))}
                                 </VStack>
                                 <Divider my={4} bg={"gray.800"} />
