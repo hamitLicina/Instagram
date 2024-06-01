@@ -45,7 +45,7 @@ export default PageLayout
 const PageLayoutSpinner = () => {
   return (
     <Flex flexDir='column' h='100vh' alignItems='center' justifyContent='center'>
-      <Spinner size='xl' />
+      <Spinner size='xxl' />
     </Flex>
   );
 };
