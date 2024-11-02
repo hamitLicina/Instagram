@@ -5,8 +5,6 @@ import useShowToast from "./useShowToast";
 import { firestore } from "../firebase/firebase";
 import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
 
-
-
 const useFollowUser = (userId) => {
   const [isUpdating, setIsUpdating] = useState(false);
   const [isFollowing, setIsFollowing] = useState(false);

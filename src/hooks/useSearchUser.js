@@ -3,8 +3,6 @@ import useShowToast from "./useShowToast";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { firestore } from "../firebase/firebase";
 
-
-
 const useSearchUser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState(null);

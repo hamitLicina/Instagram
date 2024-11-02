@@ -5,8 +5,6 @@ import useUserProfileStore from "../store/userProfileStore";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { firestore } from "../firebase/firebase";
 
-
-
 const useGetUserPosts = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { posts, setPosts } = usePostStore();

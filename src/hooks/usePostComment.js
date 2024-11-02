@@ -5,8 +5,6 @@ import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { firestore } from "../firebase/firebase";
 import usePostStore from "../store/postStore";
 
-
-
 const usePostComment = () => {
   const [isCommenting, setIsCommenting] = useState(false);
   const showToast = useShowToast();

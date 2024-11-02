@@ -6,8 +6,6 @@ import { firestore, storage } from "../firebase/firebase";
 import { doc, updateDoc } from "firebase/firestore";
 import useUserProfileStore from "../store/userProfileStore";
 
-
-
 const useEditProfile = () => {
   const [isUpdating, setIsUpdating] = useState(false);
 

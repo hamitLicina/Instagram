@@ -1,8 +1,6 @@
 import { useState } from "react";
 import useShowToast from "./useShowToast";
 
-
-
 const usePreviewImg = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const showToast = useShowToast();
